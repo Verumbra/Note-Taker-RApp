@@ -1,13 +1,20 @@
 import { useEffect, ReactNode } from 'react';
 
 
-export const Title = (side: string, children: ReactNode, size: string, wieght:number ) => {
+interface titleProps {
+    side: string | null;
+    children?: React.ReactNode;
+    size: number | null;
+    wieght: number | null;
+}
+
+export const Title = ({side, children, size, wieght}: titleProps ) => {
 
     const svgElement = () => {
-        switch (side) {
+        switch (side?side:'right') {
             case 'left': return (
                 <>
-                <span className={`title-text ${size} ${wieght}`}>{children}</span>
+                <span className={`title-text ${size?size:''} ${wieght?wieght:''}`}>{children}</span>
                 <div className="line-wrapper">
                     <svg>
                         <defs>

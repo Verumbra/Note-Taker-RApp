@@ -1,12 +1,31 @@
 
-
+@import './_colors.scss';
 
 .navbar {
     display: flex;
+    position: fixed;
     justify-content: space-between;
     width: 100%;
+    background-color: $backgroundColor;
+    button {
+        border: 1px solid;
+        border-color: $accentColor;
+        background-color: transparent;
+        color: $accentColor;
+        margin: 5px;
+        border-radius: 20px; 
+        min-width: 100px;
+        transition: all 0.1s ease-in; 
+    }
+    button:hover {
+        color: #f7f7f7;
+        background-color: $accentColor;
+        transition: all 0.1s ease-out;
+    }
 }
 
 .nav-title {
     font-size: x-large;
+    margin: 5px;
+    color: $accentColor;
 }

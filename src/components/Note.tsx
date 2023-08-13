@@ -3,7 +3,7 @@
 import { UIButton } from './UIButton';
 import { Title } from './Title';
 
-import './css/Note.css';
+import './scss/Note.scss';
 
 
 interface noteProps {
@@ -11,6 +11,7 @@ interface noteProps {
     note: string;
     Id: number;
 }
+
 
 export const Note = ({name, note, Id}: noteProps) => {
 
